@@ -2,6 +2,9 @@ export const SEARCH_TEXT_CHANGED = 'SEARCH_TEXT_CHANGED';
 export const FETCH_MOVIE_LIST_SUCCESS = 'FETCH_MOVIE_LIST_SUCCESS';
 export const FETCH_SINGLE_MOVIE_SUCCESS = 'FETCH_SINGLE_MOVIE_SUCCESS';
 export const SELECT_MOVIE = 'SELECT_MOVIE';
+export const ADD_MOVIE = "ADD_MOVIE";
+export const REMOVE_MOVIE = "REMOVE_MOVIE";
+
 
 export const searchTextChanged = queryText => ({
   type: 'SEARCH_TEXT_CHANGED',
@@ -39,5 +42,18 @@ export const fetchSingleMovie = () => (dispatch, getState) => {
 
 export const selectMovie = movieId => ({
   type: SELECT_MOVIE,
+  movieId
+});
+
+export const addMovie = (title, year, format, actors) => ({
+  type: "ADD_MOVIE",
+  title,
+  year,
+  format,
+  actors
+});
+
+export const removeMovie = movieId => ({
+  type: "REMOVE_MOVIE",
   movieId
 });
