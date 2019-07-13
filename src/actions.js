@@ -15,7 +15,7 @@ const fetchMovieListSuccess = data => ({
 
 export const fetchMovies = () => (dispatch) => {
   
-  fetch( `http://localhost:8080/movies`)
+  fetch( `http://localhost:8080/movies?sort=title&order=asc`)
       .then(response => response.json())
       .then(response => {
         dispatch(fetchMovieListSuccess(response))
