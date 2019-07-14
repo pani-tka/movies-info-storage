@@ -1,6 +1,6 @@
 import  React, {Component}  from "react";
 import { Link } from "react-router-dom";
-import MovieItem from "./movie-item";
+import MovieItem from "./index";
 
 class MovieList extends Component {
 

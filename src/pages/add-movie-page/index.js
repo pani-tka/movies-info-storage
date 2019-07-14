@@ -1,3 +1,3 @@
-import { AddMoviePage} from './add-movie-page';
+import  AddMoviePage from './add-movie-page';
 
 export { AddMoviePage };

@@ -1,3 +1,3 @@
-import { ImportMoviesPage } from './import-movies-page';
+import  ImportMoviesPage  from './import-movies-page';
 
 export { ImportMoviesPage };

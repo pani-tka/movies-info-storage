@@ -1,3 +1,3 @@
-import {PageNavigation} from './page - navigation';
+import PageNavigation from './page-navigation';
 
 export {PageNavigation};
