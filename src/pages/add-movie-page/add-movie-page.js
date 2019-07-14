@@ -1,6 +1,6 @@
 import  React, {Component}  from "react";
 import {connect} from 'react-redux';
-import {addMovie} from '../actions';
+import {addMovie} from '../../actions';
 import styles from './add-movie-page.module.scss'
 
 class AddMoviePage extends Component {

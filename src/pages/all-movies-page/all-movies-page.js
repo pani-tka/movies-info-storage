@@ -2,7 +2,7 @@ import  React, {Component}  from "react";
 import {connect} from 'react-redux';
 import { Link } from "react-router-dom";
 //import {fetchMovies} from '../actions';
-import {movies} from '../movies';
+import {movies} from '../../movies';
 import styles from './all-movies-page.module.scss';
 
 class AllMoviesPage extends Component {

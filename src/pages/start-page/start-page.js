@@ -1,6 +1,6 @@
 import React, {Component}  from "react";
 import {connect} from "react-redux";
-import {searchTextChanged,fetchSingleMovie} from "../actions";
+import {searchTextChanged,fetchSingleMovie} from "../../actions";
 import styles from './start-page.module.scss';
 
 class StartPage extends Component {
