@@ -1,37 +1,37 @@
 import  React, {Component}  from "react";
 import {connect} from 'react-redux';
 import { Link } from "react-router-dom";
-import MovieItem from '../components/movie-item';
-import {fetchMovies} from '../actions';
+//import {fetchMovies} from '../actions';
+import {movies} from '../movies';
+import styles from './all-movies-page.module.scss';
 
 class AllMoviesPage extends Component {
 
-  componentDidMount() {
+  /*componentDidMount() {
     this.props.fetchMovies();
-  }
+  }*/
   render() {
-    const {movies} = this.props;
-    console.log(this.props)
+    //const {movies} = this.props;
 
   return(
     <div>
-      <div>See all movies</div>
+      <div className={styles.movieItemHeader}>See all movies</div>
       {!!movies&&
         movies.map((item) => 
-          <MovieItem key={item.id}>
-            <div>{item.title}</div>
-            <div>
-              Year: 
-              <div>{item.year}</div>
-            </div>
-            <div>
-              Format: 
-              <div>{item.year}</div>
-            </div>
-            <Link to={`/movies/${item.title}`}>
+          <div 
+            className={styles.movieItem}
+            key={item.id}
+          >
+            <div className={styles.movieTitle}>{item.title}</div>
+            <div className={styles.movieYear}>{item.year}</div>
+            <div className={styles.movieFormat}>{item.format}</div>
+            <Link 
+              to={`/movies/${item.title}`}
+              className={styles.movieLink}
+            >
               See details
             </Link>
-          </MovieItem>
+          </ div>
         )
       }
     </div>
@@ -40,11 +40,11 @@ class AllMoviesPage extends Component {
 
 }
 const mapStateToProps = (state) => ({
-  movies: state.movies
+  //movies: state.movies
 })
 
 const mapDispatchToProps = {
-  fetchMovies
+  //fetchMovies
 };
 
 export default connect(

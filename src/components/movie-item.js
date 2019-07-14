@@ -1,12 +1,11 @@
 import React, {Component} from "react";
 import {connect} from 'react-redux';
-import {fetchSingleMovie} from '../actions';
+//import {fetchSingleMovie} from '../actions';
+import {movies} from '../movies';
 
 class MovieItem extends Component {
 
   render(){
-
-    const {movies} = this.props;
     return(
       <div>
         <div>{movies.title}</div>
@@ -25,11 +24,11 @@ class MovieItem extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  movies: state.movies
+  //movies: state.movies
 })
 
 const mapDispatchToProps = {
- fetchSingleMovie
+ //fetchSingleMovie
 };
 
 export default connect(

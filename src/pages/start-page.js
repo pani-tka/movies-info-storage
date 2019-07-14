@@ -1,8 +1,7 @@
-import  React, {Component}  from "react";
-import { Link } from "react-router-dom";
-//import MovieItem from "../components/movie-item";
+import React, {Component}  from "react";
 import {connect} from "react-redux";
 import {searchTextChanged,fetchSingleMovie} from "../actions";
+import styles from './start-page.module.scss';
 
 class StartPage extends Component {
 
@@ -20,36 +19,36 @@ class StartPage extends Component {
 
     return (
       <div>
-        <button
-        type="button"
-        >
-        <Link to="/allmovies">All Movies</Link>
-        </button>
-        <button
-        type="button"
-        >
-        <Link to="/addmovie">Add Movie</Link>
-        </button>
-        <button
-        type="button"
-        >
-        <Link to="/importmovies">Import Movie</Link>
-        </button>
-        <div>Yors Movie DB</div>
-        <div>
-          <input 
-            type = "text"
-            placehloder = "Type to search..."
-            value = {queryText}
-            onChange = {this.onChange} 
-          />
-          <button 
-            type="button"
-            onClick = {this.onClick}
-          >
-            Search
-          </button>
-        </div>
+        <div className={styles.headerTitle}>Yours Movie DB</div>
+          <div>
+            <input 
+              type = "text"
+              value = {queryText}
+              onChange = {this.onChange} 
+              className={styles.inputField}
+            />
+            <div>
+            <label className={styles.checkboxLabel}>
+              Filter by title
+                <input 
+                  type="checkbox" 
+                />
+            </label>
+            <label className={styles.checkboxLabel}>
+              Filter by actor
+                <input 
+                  type="checkbox" 
+                />
+            </label>
+          </div>
+            <button 
+              type="button"
+              onClick = {this.onClick}
+              className={styles.searchButton}
+            >
+              Search
+            </button>
+          </div>
       </div>
     )
   }

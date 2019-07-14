@@ -1,6 +1,7 @@
 import  React, {Component}  from "react";
 import {connect} from 'react-redux';
 import {addMovie} from '../actions';
+import styles from './add-movie-page.module.scss'
 
 class AddMoviePage extends Component {
 
@@ -33,41 +34,53 @@ class AddMoviePage extends Component {
   render(){
     return(
       <div>
-        <form>
-          <p>Title: </p>
-          <input 
-            type="text"
-            value={this.state.title}
-            onChange={this.changeTitle}
-            placeholder="Title"
-          />
-          <p>Year: </p>
-          <input 
-            type="text"
-            value={this.state.year}
-            onChange={this.changeYear}
-            placeholder="Title"
-          />
-          <p>Format: </p>
-          <select>
-            <option disabled> Select the format </option>
-            <option value="1"> VHS </option>
-            <option value="2"> DVD </option>
-            <option value="3"> Blue Ray </option>
-            <option value="4"> IMAX </option>
-          </select>
-          <p>Actors: </p>
-          <input type = "text"></input>
-          <input type = "text"></input>
+        <form className={styles.addMovieForm}> 
+          <div className={styles.inputItem}> 
+            Title:
+              <input 
+                type="text"
+                value={this.state.title}
+                onChange={this.changeTitle}
+                className={styles.addMovieInput}
+              />
+          </div>
+          <div className={styles.inputItem}> 
+            Year: 
+              <input 
+                type="text"
+                value={this.state.year}
+                onChange={this.changeYear}
+                className={styles.addMovieInput}
+              />
+          </div>
+          <div className={styles.selectItem}> 
+            Format: 
+              <select>
+                <option disabled> Select the format </option>
+                <option value="1"> VHS </option>
+                <option value="2"> DVD </option>
+                <option value="3"> Blue Ray </option>
+                <option value="4"> IMAX </option>
+              </select>
+          </div>
+          <div className={styles.inputItem}> 
+            Actors: 
+              <input 
+                type = "text"
+                className={styles.addMovieInput}
+              />
+          </div>
           <button
             type="button"
+            className={styles.addInput}
           >
-            Add input
+            +
           </button>
         </form>
         <button
           type="button"
           onClick={this.handleButton}
+          className={styles.saveMovieButton}
         >
           Save Movie
         </button>
