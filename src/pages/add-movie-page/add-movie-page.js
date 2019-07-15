@@ -18,6 +18,9 @@ class AddMoviePage extends Component {
 
   changeFormat = event => this.setState({format: event.target.value});
 
+  onClick = () => {
+  }
+
   handleButton = () => {
     this.props.addMovie(
       this.state.title,
@@ -33,7 +36,9 @@ class AddMoviePage extends Component {
 
   render(){
     return(
-      <div>
+      <div className={styles.container}>
+        <span className={styles.decorContainer}></span>
+        <h1 className={styles.addMovieHeader}>Add Yours Movie</h1>
         <form className={styles.addMovieForm}> 
           <div className={styles.inputItem}> 
             Title:
@@ -72,6 +77,7 @@ class AddMoviePage extends Component {
           </div>
           <button
             type="button"
+            onClick={this.onCLick}
             className={styles.addInput}
           >
             +

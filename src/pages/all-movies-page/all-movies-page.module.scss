@@ -1,34 +1,59 @@
 .movieItemHeader {
-  font-size: 30px;
+  font-size: 25px;
+  letter-spacing: 1px;
   color: #484757;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 .movieItem {
   width: 50%;
   margin: 0 auto;
-  border: 2px solid #234a56;
-  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+  border-radius: 5px;
   margin-bottom: 10px;
+  background-color: #f1f1f1;
+  position: relative;
+}
+
+.movieItem::after {
+  content: '';
+  display: block;
+  width: 30%;
+  height: 100%;
+  background-color: #4d7e29;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .movieTitle {
-  font-size: 40px;
-  color: #234a56;
+  font-size: 25px;
+  color: #0a3500;
   padding: 5px;
   text-align: left;
+  margin-left: 10px;
 }
 .movieYear, .movieFormat {
   font-size: 20px;
   color: #484757;
   padding: 5px;
   text-align: left;
+  margin-left: 10px;
 }
 
 .movieLink {
   display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 30px;
   font-size: 20px;
-  color: #9497aa;
-  padding: 15px;
+  color: #939393;
+  padding: 3px;
   text-decoration: none;
+  margin-bottom: 5px;
+}
+.movieLink:hover {
+  border-top: 1px solid #4d7e29;
+  border-bottom: 1px solid #4d7e29;
+  color: #8dba69;
 }

@@ -15,7 +15,7 @@ class AllMoviesPage extends Component {
 
   return(
     <div>
-      <div className={styles.movieItemHeader}>See all movies</div>
+      <div className={styles.movieItemHeader}>See All Movies</div>
       {!!movies&&
         movies.map((item) => 
           <div 
@@ -25,6 +25,7 @@ class AllMoviesPage extends Component {
             <div className={styles.movieTitle}>{item.title}</div>
             <div className={styles.movieYear}>{item.year}</div>
             <div className={styles.movieFormat}>{item.format}</div>
+            <div className={styles.movieActors}>{item.actors}</div>
             <Link 
               to={`/movies/${item.title}`}
               className={styles.movieLink}

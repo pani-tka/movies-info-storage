@@ -1,30 +1,53 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #eeede7;
+  margin-top: 100px;
+  position: relative;
+}
+.decorContainer {
+  display: block;
+  width: 10%;
+  height: 100%;
+  background-color: #4d7e29;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.addMovieHeader {
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #484757;
+  padding: 10px;
+}
 .addMovieForm{
   width: 50%;
   margin: 0 auto;
   border: 2px solid #234a56;
   border-radius: 10px;
-  padding: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  margin-top: 70px;
 }
 .addMovieInput {
-  width: 300px;
+  width: 50%;
+  height: 40px;
   border: 0;
   border-bottom: 2px solid #234a56;
   font-size: 30px;
   font-weight: 300;
-  height: 40px;
   text-align: center;
   padding: 5px;
-  color: #9497aa;
+  background-color: transparent;
+  color: #484757;
   outline: none;
   margin-bottom: 20px;
   margin-left: 20px;
 }
 
 .selectItem select {
-  width: 270px;
+  width: 40%;
   height: 40px;
   margin: 10px 35px 10px 35px;
   outline: none;
@@ -43,7 +66,7 @@
 .addInput{
   width: 40px;
   height: 40px;
-  background-color: #484757;
+  background-color: #4d7e29;
   border-radius: 50%;
   color: white;
   font-size: 20px;
@@ -54,13 +77,14 @@
 .saveMovieButton {
   width: 150px;
   height: 50px;
+  background-color: #4d7e29;
   font-size: 20px;
   font-weight: 300;
-  color: #9497aa;
-  border: 2px solid #234a56;
+  color: #f1f1f1;
+  border: 2px solid transparent;
   border-radius: 10px;
   padding: 10px;
   margin-top: 30px;
+  margin-bottom: 30px;
   outline: none;
 }
-

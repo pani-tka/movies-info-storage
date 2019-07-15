@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Dropzone from 'react-dropzone';
+import styles from './import-movies-page.module.scss';
 
 class ImportMoviesPage extends Component {
   constructor() {
@@ -22,14 +23,20 @@ class ImportMoviesPage extends Component {
     return (
       <Dropzone onDrop={this.onDrop}>
         {({getRootProps, getInputProps}) => (
-          <section className="container">
+          <section className={styles.container}>
+            <p className={styles.dropTitle}>Select the import file: </p>
             <div {...getRootProps({className: 'dropzone'})}>
-              <input {...getInputProps()} />
-              <p>Drag 'n' drop some files here, or click to select files</p>
+              <input {...getInputProps()} className={styles.dropzoneInput}/>
+              <p className={styles.dropDescription}>Drag 'n' drop some files here, or click to select files</p>
             </div>
             <aside>
-              <h4>Files</h4>
               <ul>{files}</ul>
+              <button 
+                type="button"
+                className={styles.uploadBatton}
+              >
+                UPLOAD
+              </button>
             </aside>
           </section>
         )}
